@@ -1,0 +1,28 @@
+@import "variables";
+
+@font-face {
+  font-family: "Calibre";
+  src: url("fonts/Calibre_Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SF Mono Regular";
+  src: url("fonts/SFMonoRegular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $bg-col;
+  color: $text-col;
+  font-family: "Calibre";
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

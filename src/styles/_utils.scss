@@ -1,0 +1,17 @@
+@import "variables";
+
+.primary-btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid $ascent-col;
+  color: $ascent-col;
+  width: fit-content;
+  padding: 10px 14px;
+  text-decoration: none;
+  transition: linear 0.15s;
+}
+
+.primary-btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px $ascent-col;
+}

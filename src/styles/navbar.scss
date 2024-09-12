@@ -1,0 +1,45 @@
+@import "variables";
+@import "utils";
+
+nav {
+  font-family: "SF Mono Regular";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 100px;
+  padding-top: 30px;
+
+  .nav-logo {
+    text-decoration: none;
+    color: $ascent-col;
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $header-col;
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.2s;
+
+      p {
+        color: $ascent-col;
+      }
+    }
+
+    .nav-link:hover {
+      color: $ascent-col;
+    }
+  }
+
+  .primary-btn {
+    font-size: 14px;
+  }
+}
