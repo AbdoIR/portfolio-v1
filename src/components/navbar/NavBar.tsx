@@ -1,11 +1,13 @@
+import { motion } from "framer-motion";
 import "styles/navbar.scss";
+import { showDownNav } from "utils/motions";
 import NavLink from "./NavLink";
 
 export const navbarLinks = ["About", "Skills", "Projects", "Contact"];
 
 export default function NavBar() {
   return (
-    <nav>
+    <motion.nav variants={showDownNav} initial="hidden" animate="visible" transition={{ duration: 0.5 }}>
       <a href="" className="nav-logo">
         Chakir Abderrahmane
       </a>
@@ -18,6 +20,6 @@ export default function NavBar() {
           Resume
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

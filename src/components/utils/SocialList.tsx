@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { VscMail } from "react-icons/vsc";
+import { showUpContainerFast, showUpItem } from "utils/motions";
 import SocialLayout from "./SocialLayout";
 
 export default function SocialList() {
@@ -10,11 +12,11 @@ export default function SocialList() {
   ];
 
   return (
-    <div className="social-list">
+    <motion.div variants={showUpContainerFast} initial="hidden" animate="visible" className="social-list">
       {socialList.map((s, i) => (
         <SocialLayout key={i} url={s.url} Icon={s.icon} />
       ))}
-      <div className="social-list-bar"></div>
-    </div>
+      <motion.div variants={showUpItem} className="social-list-bar"></motion.div>
+    </motion.div>
   );
 }
