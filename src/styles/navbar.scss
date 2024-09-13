@@ -59,14 +59,15 @@ nav {
   top: 0;
   min-height: 100vh;
   width: min(75vw, 400px);
-  transform: translateX(100vw);
+  right: -400px;
   box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.397);
   background-color: $bg-col;
   transition: ease 0.7s;
   z-index: 99;
 
   &.active {
-    transform: translateX(calc(100vw - 400px));
+    // display: flex;
+    right: 0;
   }
 
   .sidenav-links {
