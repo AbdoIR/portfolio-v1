@@ -1,8 +1,20 @@
 @import "variables";
 @import "utils";
 
+@mixin nav-link-mixing {
+  display: flex;
+  text-decoration: none;
+  color: $header-col;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $ascent-col;
+  }
+}
+
 nav {
   font-family: "SF Mono Regular";
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,25 +33,71 @@ nav {
     column-gap: 30px;
 
     .nav-link {
-      display: flex;
+      @include nav-link-mixing;
       align-items: center;
-      text-decoration: none;
-      color: $header-col;
       font-size: 14px;
       font-weight: 400;
-      transition: color 0.2s;
 
       p {
         color: $ascent-col;
       }
     }
-
-    .nav-link:hover {
-      color: $ascent-col;
-    }
   }
 
   .primary-btn {
     font-size: 14px;
+  }
+}
+
+.sidenav {
+  font-family: "SF Mono Regular";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  min-height: 100vh;
+  width: min(75vw, 400px);
+  transform: translateX(100vw);
+  box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.397);
+  background-color: $bg-col;
+  transition: ease 0.7s;
+  z-index: 99;
+
+  &.active {
+    transform: translateX(calc(100vw - 400px));
+  }
+
+  .sidenav-links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .nav-link {
+    @include nav-link-mixing;
+    align-items: center;
+    font-size: 20px;
+  }
+}
+
+@media screen and (width <= 1094px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+@media screen and (width <= 900px) {
+  nav {
+    margin-inline: 50px;
+  }
+
+  .hero {
+    margin-left: 100px;
   }
 }

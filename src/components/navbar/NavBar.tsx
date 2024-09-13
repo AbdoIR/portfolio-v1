@@ -1,8 +1,14 @@
+import Burger from "components/utils/Burger";
+import { useEffect } from "react";
 import "styles/navbar.scss";
 import NavLink from "./NavLink";
 
-export default function NavBar() {
-  const navbarLinks = ["About", "Skills", "Projects", "Contact"];
+export const navbarLinks = ["About", "Skills", "Projects", "Contact"];
+
+export default function NavBar({ setShowSidenav }: any) {
+  const handleBurger = (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
+    setShowSidenav(e.currentTarget.checked);
+  };
 
   return (
     <nav>
@@ -11,13 +17,14 @@ export default function NavBar() {
       </a>
       <div className="nav-links">
         {navbarLinks.map((l, i) => (
-          <NavLink number={i + 1} title={l} />
+          <NavLink key={i} number={i + 1} title={l} />
         ))}
 
         <a href="#" className="primary-btn">
           Resume
         </a>
       </div>
+      <Burger handleClick={handleBurger} />
     </nav>
   );
 }

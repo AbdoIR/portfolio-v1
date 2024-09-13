@@ -1,3 +1,5 @@
+import { RxDoubleArrowDown } from "react-icons/rx";
+
 export default function Hero() {
   return (
     <div className="hero">
@@ -12,6 +14,9 @@ export default function Hero() {
       </div>
       <a href="#" className="primary-btn">
         Get my resume
+      </a>
+      <a href="#" className="scroll-arrows">
+        <RxDoubleArrowDown />
       </a>
     </div>
   );

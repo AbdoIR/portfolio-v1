@@ -1,17 +1,26 @@
 @import "variables";
 
+.main-content {
+  &.blurred {
+    filter: blur(5px);
+  }
+}
+
 .content-container {
   display: flex;
+  flex-direction: column;
+  padding-inline: 150px;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   row-gap: 20px;
-  max-width: 690px;
-  margin-left: 300px;
-  min-height: calc(100vh - 200px);
+  margin-left: 150px;
+  min-height: calc(100vh - 100px);
+  position: relative;
 
   .hero-intro {
     font-family: "SF Mono Regular";
@@ -21,7 +30,7 @@
 
   .hero-headers {
     font-weight: 600;
-    font-size: 80px;
+    font-size: clamp(40px, 8vw, 80px);
 
     p {
       color: $header-col;
@@ -31,5 +40,40 @@
   .hero-description {
     font-size: 20px;
     line-height: 26px;
+    max-width: 690px;
+  }
+
+  @keyframes bouncing {
+    0% {
+      transform: translate(0);
+    }
+
+    50% {
+      transform: translate(0, 10px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  .scroll-arrows {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 34px);
+    font-size: 34px;
+    color: $ascent-col;
+    transition: ease-out 0.2s;
+    animation: bouncing 2s infinite;
+  }
+
+  .scroll-arrows:hover {
+    filter: drop-shadow(0 0 2px #24ecff);
+  }
+}
+
+@media screen and (width <= 1094px) {
+  .content-container {
+    padding-inline: 0;
   }
 }

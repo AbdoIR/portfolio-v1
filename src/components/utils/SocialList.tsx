@@ -11,8 +11,8 @@ export default function SocialList() {
 
   return (
     <div className="social-list">
-      {socialList.map((s) => (
-        <SocialLayout url={s.url} Icon={s.icon} />
+      {socialList.map((s, i) => (
+        <SocialLayout key={i} url={s.url} Icon={s.icon} />
       ))}
       <div className="social-list-bar"></div>
     </div>
