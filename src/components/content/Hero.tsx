@@ -12,7 +12,7 @@ export default function Hero() {
         in software engineering. I'm dedicated to building visually appealing and user-centric websites, and
         I'm eager to explore new opportunities to further enhance my skills.
       </div>
-      <a href="#" className="primary-btn">
+      <a href="assets/files/cv_eng.pdf" target="_blank" className="primary-btn">
         Get my resume
       </a>
       <a href="#" className="scroll-arrows">

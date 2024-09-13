@@ -14,7 +14,7 @@ export default function NavBar() {
           <NavLink key={i} number={i + 1} title={l} />
         ))}
 
-        <a href="#" className="primary-btn">
+        <a href="assets/files/cv_eng.pdf" target="_blank" className="primary-btn">
           Resume
         </a>
       </div>
