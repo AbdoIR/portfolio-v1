@@ -12,6 +12,10 @@
   font-weight: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,4 +34,41 @@ code {
 
 p {
   margin: 0;
+}
+
+@media screen and (width <= 1094px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .burger {
+    display: flex !important;
+  }
+
+  .content-container {
+    padding-inline: 40px !important;
+  }
+}
+
+@media screen and (width < 768px) {
+  .social-list {
+    display: none !important;
+  }
+
+  .hero {
+    margin-left: 0 !important;
+    padding-inline: 40px !important;
+  }
+}
+
+@media screen and (width <= 900px) {
+  nav {
+    margin-inline: 50px !important;
+  }
+}
+
+@media screen and (width <= 580px) {
+  .scroll-arrows {
+    display: none;
+  }
 }

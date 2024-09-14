@@ -18,10 +18,12 @@ export default function Hero() {
         in software engineering. I'm dedicated to building visually appealing and user-centric websites, and
         I'm eager to explore new opportunities to further enhance my skills.
       </TextEffect>
-      <motion.a variants={showUpItem} href="assets/files/cv_eng.pdf" target="_blank" className="primary-btn">
-        Get my resume
-      </motion.a>
-      <motion.a href="#" className="scroll-arrows">
+      <motion.div variants={showUpItem} className="hero-resume">
+        <a href="assets/files/cv_eng.pdf" target="_blank" className="primary-btn">
+          Get my resume
+        </a>
+      </motion.div>
+      <motion.a href="#about" className="scroll-arrows">
         <RxDoubleArrowDown />
       </motion.a>
     </motion.div>

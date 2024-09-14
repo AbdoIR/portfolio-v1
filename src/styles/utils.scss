@@ -1,5 +1,6 @@
 @import "variables";
 
+// B U T T O N S
 .primary-btn {
   display: flex;
   align-items: center;
@@ -16,6 +17,34 @@
   box-shadow: 3px 3px $ascent-col;
 }
 
+// H E A D E R S
+.ch-container {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin: 50px 0px;
+
+  .content-header {
+    font-size: 32px;
+    font-weight: 600;
+    color: $header-col;
+
+    span {
+      font-family: "SF Mono Regular";
+      font-size: 20px;
+      font-weight: 400;
+      color: $ascent-col;
+    }
+  }
+
+  .horizental-line {
+    background-color: #cacaca48;
+    width: calc(100% - 250px);
+    height: 1px;
+  }
+}
+
+// O T H E R S
 .social-list {
   display: flex;
   flex-direction: column;

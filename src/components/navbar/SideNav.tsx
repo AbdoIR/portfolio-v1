@@ -11,7 +11,7 @@ export default function SideNav({ visible }: SideNavProps) {
           <NavLink key={i} title={l} />
         ))}
 
-        <a href="#" className="primary-btn">
+        <a href="assets/files/cv_eng.pdf" target="_blank" className="primary-btn">
           Resume
         </a>
       </div>

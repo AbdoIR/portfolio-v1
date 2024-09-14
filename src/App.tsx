@@ -1,9 +1,9 @@
-import { useState } from "react";
 import Content from "components/content/Content";
 import NavBar from "components/navbar/NavBar";
-import SocialList from "components/utils/SocialList";
 import SideNav from "components/navbar/SideNav";
 import Burger from "components/utils/Burger";
+import SocialList from "components/utils/SocialList";
+import { useState } from "react";
 
 function App() {
   const [showSidenav, setShowSidenav] = useState(false);

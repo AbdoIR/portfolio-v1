@@ -66,7 +66,6 @@ nav {
   z-index: 99;
 
   &.active {
-    // display: flex;
     right: 0;
   }
 
@@ -80,25 +79,5 @@ nav {
     @include nav-link-mixing;
     align-items: center;
     font-size: 20px;
-  }
-}
-
-@media screen and (width <= 1094px) {
-  .nav-links {
-    display: none !important;
-  }
-
-  .burger {
-    display: flex;
-  }
-}
-
-@media screen and (width <= 900px) {
-  nav {
-    margin-inline: 50px;
-  }
-
-  .hero {
-    margin-left: 100px;
   }
 }

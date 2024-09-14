@@ -3,7 +3,7 @@ import "styles/navbar.scss";
 import { showDownNav } from "utils/motions";
 import NavLink from "./NavLink";
 
-export const navbarLinks = ["About", "Skills", "Projects", "Contact"];
+export const navbarLinks: string[] = ["About", "Skills", "Projects", "Contact"];
 
 export default function NavBar() {
   return (
