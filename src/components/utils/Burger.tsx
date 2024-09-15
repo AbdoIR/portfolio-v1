@@ -1,7 +1,7 @@
 export default function Burger({ handleClick }: any) {
   return (
     <label className="burger">
-      <input type="checkbox" onClick={handleClick} />
+      <input type="checkbox" id="burger" onClick={handleClick} />
       <svg viewBox="0 0 32 32">
         <path
           className="line line-top-bottom"

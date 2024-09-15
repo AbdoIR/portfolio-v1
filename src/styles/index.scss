@@ -50,7 +50,11 @@ p {
   }
 }
 
-@media screen and (width < 768px) {
+@media screen and (width <= 900px) {
+  nav {
+    margin-inline: 50px !important;
+  }
+
   .social-list {
     display: none !important;
   }
@@ -59,11 +63,9 @@ p {
     margin-left: 0 !important;
     padding-inline: 40px !important;
   }
-}
 
-@media screen and (width <= 900px) {
-  nav {
-    margin-inline: 50px !important;
+  .scroll-arrows {
+    left: calc(50% - 17px) !important;
   }
 }
 

@@ -76,12 +76,8 @@
 }
 
 .burger {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  cursor: pointer;
   display: none;
-  z-index: 100;
+  cursor: pointer;
 }
 
 .burger input {
@@ -105,17 +101,4 @@
 
 .line-top-bottom {
   stroke-dasharray: 12 63;
-}
-
-.burger input:checked + svg {
-  transform: rotate(-45deg);
-}
-
-.burger input:checked + svg .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
-}
-
-.burger input:checked + svg .sidenav {
-  right: 0;
 }
