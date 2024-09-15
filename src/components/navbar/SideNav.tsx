@@ -1,6 +1,6 @@
+import { IoMdClose } from "react-icons/io";
 import { navbarLinks } from "./NavBar";
 import NavLink from "./NavLink";
-import { IoMdClose } from "react-icons/io";
 
 type SideNavProps = { visible: true | false; setShowSidenav: any };
 

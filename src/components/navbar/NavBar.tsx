@@ -1,8 +1,8 @@
+import Burger from "components/utils/Burger";
 import { motion } from "framer-motion";
 import "styles/navbar.scss";
 import { showDownNav } from "utils/motions";
 import NavLink from "./NavLink";
-import Burger from "components/utils/Burger";
 
 export const navbarLinks: string[] = ["About", "Skills", "Projects", "Contact"];
 

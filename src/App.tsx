@@ -2,7 +2,7 @@ import Content from "components/content/Content";
 import NavBar from "components/navbar/NavBar";
 import SideNav from "components/navbar/SideNav";
 import SocialList from "components/utils/SocialList";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [showSidenav, setShowSidenav] = useState(false);
