@@ -80,11 +80,24 @@
   flex-direction: column;
   justify-content: center;
   margin-inline: auto;
-  min-height: 70vh;
+  min-height: 65vh;
   line-height: 26px;
   max-width: 700px;
 
   .about-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
     font-size: 20px;
+
+    span {
+      color: $light-ascent-col;
+    }
   }
+}
+
+// S K I L L S  S E C T I O N
+.skills-section {
+  display: flex;
+  justify-content: center;
 }
