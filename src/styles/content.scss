@@ -80,7 +80,7 @@
   flex-direction: column;
   justify-content: center;
   margin-inline: auto;
-  min-height: 65vh;
+  min-height: 70vh;
   line-height: 26px;
   max-width: 700px;
 
@@ -99,5 +99,47 @@
 // S K I L L S  S E C T I O N
 .skills-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  min-height: 60vh;
+  max-width: 800px;
+  margin-inline: auto;
+
+  .skills-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    .skills-div {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 40px;
+      margin-inline: 30px;
+
+      .div-title {
+        font-size: 30px;
+      }
+
+      .div-skills {
+        display: flex;
+        column-gap: 20px;
+
+        .div-skill {
+          display: flex;
+          padding: 10px;
+          border-radius: 8px;
+          font-size: 40px;
+          background-color: $card-bg-col;
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          cursor: pointer;
+          transition: ease 0.2s;
+
+          &:hover {
+            transform: translateY(-10px);
+          }
+        }
+      }
+    }
+  }
 }
