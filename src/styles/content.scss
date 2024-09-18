@@ -102,7 +102,8 @@
   flex-direction: column;
   justify-content: center;
   min-height: 60vh;
-  max-width: 800px;
+  max-width: 700px;
+  width: 100%;
   margin-inline: auto;
 
   .skills-content {
@@ -111,32 +112,41 @@
     row-gap: 30px;
 
     .skills-div {
-      display: flex;
-      justify-content: space-between;
-      column-gap: 40px;
-      margin-inline: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      align-items: center;
+      column-gap: 10px;
+      margin-inline: 20px;
 
       .div-title {
         font-size: 30px;
+        color: $light-ascent-col;
       }
 
       .div-skills {
-        display: flex;
-        column-gap: 20px;
+        display: grid;
+        justify-content: flex-end;
+        grid-template-columns: repeat(auto-fit, minmax(55px, auto));
+        column-gap: 10px;
+        row-gap: 10px;
 
         .div-skill {
           display: flex;
-          padding: 10px;
+          justify-content: center;
+          align-items: center;
           border-radius: 8px;
           font-size: 40px;
+          width: 50px;
+          height: 50px;
+          padding: 5px;
           background-color: $card-bg-col;
-          backdrop-filter: blur(5px);
-          -webkit-backdrop-filter: blur(5px);
           cursor: pointer;
           transition: ease 0.2s;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
           &:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            background-color: $card-hover-col;
           }
         }
       }
