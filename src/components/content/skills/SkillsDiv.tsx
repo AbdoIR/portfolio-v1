@@ -10,8 +10,8 @@ export default function SkillsDiv({ title, children }: SkillsDivProps) {
     <div className="skills-div">
       <div className="div-title">{title}</div>
       <div className="div-skills">
-        {children.map((child) => (
-          <Skill>{child}</Skill>
+        {children.map((child, i) => (
+          <Skill key={i}>{child}</Skill>
         ))}
       </div>
     </div>

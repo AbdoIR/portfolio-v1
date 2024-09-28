@@ -11,6 +11,11 @@ export const showUpItem = {
   visible: { opacity: 1, y: 0 },
 };
 
+export const contentHeader = {
+  hidden: { opacity: 0, width: "30%" },
+  visible: { opacity: 1, width: "100%" },
+};
+
 export const showDownNav = {
   hidden: { opacity: 0, y: -50 },
   visible: { opacity: 1, y: 0 },

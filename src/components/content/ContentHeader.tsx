@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { contentHeader } from "utils/motions";
+
 type ContentHeaderProps = {
   number: number;
   title: string;
@@ -5,12 +8,12 @@ type ContentHeaderProps = {
 
 export default function ContentHeader({ number, title }: ContentHeaderProps) {
   return (
-    <div className="ch-container">
+    <motion.div variants={contentHeader} initial="hidden" whileInView="visible" className="ch-container">
       <div className="content-header">
         <span>0{number}. </span>
         {title}
       </div>
       <div className="horizental-line"></div>
-    </div>
+    </motion.div>
   );
 }
