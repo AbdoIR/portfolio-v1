@@ -8,7 +8,13 @@ type ContentHeaderProps = {
 
 export default function ContentHeader({ number, title }: ContentHeaderProps) {
   return (
-    <motion.div variants={contentHeader} initial="hidden" whileInView="visible" className="ch-container">
+    <motion.div
+      variants={contentHeader}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="ch-container"
+    >
       <div className="content-header">
         <span>0{number}. </span>
         {title}

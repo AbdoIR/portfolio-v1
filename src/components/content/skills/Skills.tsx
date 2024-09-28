@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   BiLogoCss3,
   BiLogoGit,
@@ -14,12 +15,19 @@ import { SiRedux } from "react-icons/si";
 
 import ContentHeader from "../ContentHeader";
 import SkillsDiv from "./SkillsDiv";
+import { skillsContent } from "utils/motions";
 
 export default function Skills() {
   return (
     <div className="skills-section" id="skills">
       <ContentHeader number={2} title="Skills" />
-      <div className="skills-content">
+      <motion.div
+        variants={skillsContent}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="skills-content"
+      >
         <SkillsDiv title="Front-End">
           <FaReact color="#61DBFB" />
           <SiRedux color="#774cbc" />
@@ -44,7 +52,7 @@ export default function Skills() {
           <BiLogoGit color="#ef5132" />
           <FaJira color="#0052cc" />
         </SkillsDiv>
-      </div>
+      </motion.div>
     </div>
   );
 }
