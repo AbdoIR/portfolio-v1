@@ -6,7 +6,7 @@ type SocialProps = { url: string; Icon: IconType };
 
 export default function SocialLayout({ url, Icon }: SocialProps) {
   return (
-    <motion.a variants={showUpItem} href={url} className="social-layout">
+    <motion.a variants={showUpItem} href={url} target="_blank" className="social-layout">
       <Icon />
     </motion.a>
   );

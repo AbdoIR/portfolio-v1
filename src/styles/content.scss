@@ -82,16 +82,25 @@
   margin-inline: auto;
   min-height: 90vh;
   line-height: 26px;
-  max-width: 700px;
+  max-width: 900px;
 
   .about-content {
     display: flex;
-    flex-direction: column;
-    row-gap: 15px;
-    font-size: 20px;
+    column-gap: 50px;
+
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      font-size: 20px;
+    }
 
     span {
       color: $light-ascent-col;
+    }
+
+    img {
+      width: 300px;
     }
   }
 }
@@ -146,12 +155,112 @@
           cursor: pointer;
           transition: ease 0.2s;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          position: relative;
 
           &:hover {
             transform: translateY(-5px);
             background-color: $card-hover-col;
           }
         }
+      }
+    }
+  }
+}
+
+// P R O J E C T S  S E C T I O N
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  max-width: 900px;
+  width: 100%;
+  scroll-margin: -20px;
+  margin: 20px auto;
+
+  .projects-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    column-gap: 20px;
+    row-gap: 20px;
+
+    .project-div {
+      display: flex;
+      flex-direction: column;
+      background-color: $card-bg-col;
+      padding: 20px;
+      width: fit-content;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: ease 0.2s;
+
+      a {
+        border-radius: 8px;
+        img {
+          border-radius: 8px;
+          width: 250px;
+          aspect-ratio: 1.5 / 1;
+        }
+      }
+
+      .project-details {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+        padding-top: 10px;
+
+        .project-name-git {
+          display: flex;
+          justify-content: space-between;
+          color: white;
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+
+            &.project-name {
+              position: relative;
+
+              &::before {
+                content: "";
+                background-color: $light-ascent-col;
+                width: 0;
+                height: 3px;
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                transition: ease 0.3s;
+              }
+
+              &:hover::before {
+                width: 100%;
+              }
+            }
+
+            svg {
+              font-size: 24px;
+              transition: ease 0.2s;
+
+              &:hover {
+                color: $light-ascent-col;
+              }
+            }
+          }
+        }
+
+        .project-skills {
+          display: flex;
+          column-gap: 5px;
+          font-size: 24px;
+          padding-top: 8px;
+        }
+      }
+
+      &:hover {
+        background-color: $card-hover-col;
       }
     }
   }

@@ -10,7 +10,7 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 import { DiMysql } from "react-icons/di";
-import { FaBootstrap, FaJira, FaLaravel, FaPhp, FaReact, FaSass } from "react-icons/fa";
+import { FaBootstrap, FaDatabase, FaJira, FaLaravel, FaPhp, FaReact, FaSass } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
 
 import ContentHeader from "../ContentHeader";
@@ -40,7 +40,8 @@ export default function Skills() {
           <BiLogoNodejs color="#58a149" />
           <FaPhp color="#556096" />
           <BiLogoMongodb color="#11aa50" />
-          <DiMysql color="#00566a" />
+          <DiMysql color="#007089" />
+          <FaDatabase size={24} color="#3178c6" />
         </SkillsDiv>
         <SkillsDiv title="Styling">
           <BiLogoCss3 color="#2965f1" />

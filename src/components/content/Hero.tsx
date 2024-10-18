@@ -20,7 +20,7 @@ export default function Hero() {
       </TextEffect>
       <motion.div variants={showUpItem} className="hero-resume">
         <a href="assets/files/cv_eng.pdf" target="_blank" className="primary-btn">
-          Get my resume
+          View Resume
         </a>
       </motion.div>
       <motion.a href="#about" className="scroll-arrows">

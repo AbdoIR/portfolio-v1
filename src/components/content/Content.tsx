@@ -2,6 +2,7 @@ import "styles/content.scss";
 import Hero from "./Hero";
 import About from "./About";
 import Skills from "./skills/Skills";
+import Projects from "./projects/Projects";
 
 export default function Content() {
   return (
@@ -9,6 +10,7 @@ export default function Content() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
     </div>
   );
 }

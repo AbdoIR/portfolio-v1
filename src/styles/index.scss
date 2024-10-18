@@ -23,7 +23,20 @@ body {
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $bg-col;
+  background: linear-gradient(135deg, #1a1a2e 0%, #14427b 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   color: $text-col;
   font-family: "Calibre";
 }
@@ -47,6 +60,18 @@ p {
 
   .content-container {
     padding-inline: 40px !important;
+
+    .about-content {
+      flex-direction: column;
+      max-width: 700px;
+      row-gap: 30px;
+
+      img {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
   }
 }
 
