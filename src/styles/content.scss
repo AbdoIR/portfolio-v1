@@ -110,10 +110,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 120vh;
   max-width: 700px;
   width: 100%;
   margin-inline: auto;
+  scroll-margin: -100px;
 
   .skills-content {
     display: flex;
@@ -274,6 +275,90 @@
       &:hover {
         translate: 0 -5px;
         background-color: $card-hover-col;
+      }
+    }
+  }
+}
+
+// C O N T A C T  S E C T I O N
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70vh;
+  margin-inline: auto;
+  margin-top: 50px;
+  max-width: 1000px;
+  width: 100%;
+
+  .contact-infos {
+    margin-top: 45px;
+
+    h1 {
+      color: white;
+      font-size: 56px;
+
+      span {
+        color: $ascent-col;
+      }
+    }
+
+    .contact-mail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+
+      svg {
+        color: $ascent-col;
+        font-size: 46px;
+      }
+
+      .contact-mail-infos {
+        font-size: 26px;
+
+        span {
+          color: white;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    align-items: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+
+      input {
+        background-color: $card-bg-col;
+        border: 0;
+        transition: ease 0.3s;
+        padding: 10px;
+        color: white;
+        width: 450px;
+        border-radius: 4px;
+        outline: 1px solid transparent;
+
+        &[name="message"] {
+          height: 100px;
+        }
+
+        &:focus,
+        &:hover {
+          outline-color: $light-ascent-col;
+        }
+      }
+
+      button {
+        background-color: transparent;
+        cursor: pointer;
       }
     }
   }

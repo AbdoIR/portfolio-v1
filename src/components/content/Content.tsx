@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Skills from "./skills/Skills";
 import Projects from "./projects/Projects";
+import ContactLayout from "./contact/ContactLayout";
 
 export default function Content() {
   return (
@@ -11,6 +12,7 @@ export default function Content() {
       <About />
       <Skills />
       <Projects />
+      <ContactLayout />
     </div>
   );
 }
