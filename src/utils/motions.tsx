@@ -31,6 +31,6 @@ export const skillsDiv = {
 };
 
 export const divSkills = {
-  hidden: { opacity: 0, scale: 0.6 },
+  hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1 },
 };

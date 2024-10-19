@@ -121,11 +121,10 @@
     row-gap: 30px;
 
     .skills-div {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      align-items: center;
+      display: flex;
+      flex-direction: column;
       column-gap: 10px;
-      row-gap: 15px;
+      row-gap: 25px;
       margin-inline: 20px;
 
       .div-title {
@@ -136,26 +135,39 @@
       .div-skills {
         display: grid;
         justify-content: flex-start;
-        grid-template-columns: repeat(auto-fit, minmax(55px, auto));
+        grid-template-columns: repeat(auto-fit, minmax(120px, auto));
         column-gap: 10px;
         row-gap: 10px;
+        width: 100%;
 
         .div-skill {
           display: flex;
-          justify-content: center;
           align-items: center;
-          border-radius: 8px;
-          font-size: 40px;
-          width: 50px;
-          height: 50px;
-          padding: 5px;
-          backdrop-filter: blur(5px);
-          -webkit-backdrop-filter: blur(5px);
-          background-color: $card-bg-col;
-          cursor: pointer;
+          justify-content: center;
+          column-gap: 5px;
+          border: 1px solid $text-col;
+          border-style: dashed;
+          padding: 8px 12px;
+          cursor: default;
           transition: ease 0.2s;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          position: relative;
+
+          &:hover {
+            border-style: double;
+            border-color: $light-ascent-col;
+          }
+
+          .skill-icon {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+          }
+
+          .skill-name {
+            display: flex;
+            align-items: center;
+            font-family: "SF Mono Regular";
+            font-size: 14px;
+          }
 
           &:hover {
             transform: translateY(-5px);
@@ -260,6 +272,7 @@
       }
 
       &:hover {
+        translate: 0 -5px;
         background-color: $card-hover-col;
       }
     }

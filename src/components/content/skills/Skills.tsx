@@ -11,7 +11,7 @@ import {
 } from "react-icons/bi";
 import { DiMysql } from "react-icons/di";
 import { FaBootstrap, FaDatabase, FaJira, FaLaravel, FaPhp, FaReact, FaSass } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
+import { SiRedux, SiUml } from "react-icons/si";
 
 import ContentHeader from "../ContentHeader";
 import SkillsDiv from "./SkillsDiv";
@@ -29,29 +29,30 @@ export default function Skills() {
         className="skills-content"
       >
         <SkillsDiv title="Front-End">
-          <FaReact color="#61DBFB" />
-          <SiRedux color="#774cbc" />
-          <BiLogoTypescript color="#3178c6" />
-          <BiLogoJavascript color="#F0DB4F" />
-          <BiLogoHtml5 color="#F06529" />
+          <FaReact color="#61DBFB" name="React" />
+          <SiRedux color="#774cbc" name="Redux" />
+          <BiLogoTypescript color="#3178c6" name="TypeScript" />
+          <BiLogoJavascript color="#F0DB4F" name="JavaScript" />
+          <BiLogoHtml5 color="#F06529" name="HTML5" />
         </SkillsDiv>
         <SkillsDiv title="Back-End">
-          <FaLaravel color="#fd5542" />
-          <BiLogoNodejs color="#58a149" />
-          <FaPhp color="#556096" />
-          <BiLogoMongodb color="#11aa50" />
-          <DiMysql color="#007089" />
-          <FaDatabase size={24} color="#3178c6" />
+          <FaLaravel color="#fd5542" name="Laravel" />
+          <BiLogoNodejs color="#58a149" name="Node.js" />
+          <FaPhp color="#556096" name="PHP" />
+          <BiLogoMongodb color="#11aa50" name="MongoDB" />
+          <DiMysql color="#007089" name="MySQL" />
+          <FaDatabase size={24} color="#3178c6" name="SQL" />
         </SkillsDiv>
         <SkillsDiv title="Styling">
-          <BiLogoCss3 color="#2965f1" />
-          <FaSass color="#cd5d96" />
-          <FaBootstrap color="#7d57b5" />
-          <BiLogoTailwindCss color="#1fb9bb" />
+          <BiLogoCss3 color="#2965f1" name="CSS3" />
+          <FaSass color="#cd5d96" name="SASS" />
+          <FaBootstrap color="#7d57b5" name="Bootstrap" />
+          <BiLogoTailwindCss color="#1fb9bb" name="Tailwind CSS" />
         </SkillsDiv>
         <SkillsDiv title="Miscellaneous">
-          <BiLogoGit color="#ef5132" />
-          <FaJira color="#0052cc" />
+          <BiLogoGit color="#ef5132" name="Git" />
+          <FaJira color="#0052cc" name="Jira" />
+          <SiUml color="#F0DB4F" name="UML" />
         </SkillsDiv>
       </motion.div>
     </div>
